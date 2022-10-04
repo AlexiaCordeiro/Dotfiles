@@ -35,26 +35,37 @@ bspc config presel_feedback_color \#FFFFFF # ?
 #
 # Set display from arandr saved script
 sh ~/.screenlayout/monitor.sh &
+
 # Bar
 ~/.config/polybar/launch.sh &
+
 # Notifications
 /usr/bin/dunst &
+
 # Polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 # Wallpaper
 nitrogen --restore &
+
 # Dex
 dex -a -s /etc/xdg/autostart/:~/.config/autostart/  
-# Picom
-# picom -CGb &
+
 # Network Applet
 nm-applet --indicator &
 
 # Cursor
 xsetroot -cursor_name left_ptr &
 
+#Bluetoothctl
+~/.config/bluetoothctl.sh &
+
 # Low battery notifier
 ~/.config/bspwm/scripts/low_bat_notifier.sh
 /usr/bin/numlockx &
+
 #Led
 xset led 3 &
+
+#Redshift
+redshift-gtk &
