@@ -10,11 +10,11 @@ super + shift + u
 
 #Volume control
 
-F3
+XF86AudioRaiseVolume
     pactl -- set-sink-volume 0 +10%
-F2
+XF86AudioLowerVolume
     pactl -- set-sink-volume 0 -10%
-F1
+XF86AudioMute
     pactl set-sink-mute 0 toggle
 
 #Spotify
@@ -22,8 +22,10 @@ shift + {s}
 	LD_PRELOAD=/home/alexia/spotifywm/spotifywm.so /opt/spotify/spotify
 
 #Brightness
+#XF86MonBrightnessDown
 F11
 	brightnessctl set 30%-
+#XF86MonBrightnessUp
 F12
 	brightnessctl set +30%
 
