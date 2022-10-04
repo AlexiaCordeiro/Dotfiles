@@ -9,20 +9,23 @@ super + shift + u
     ${HOME}/.config/rofi/scripts/mpd.sh
 
 #Volume control
-shift + F3
-    pactl set-sink-volume @DEFAULT_SINK@ +5%
-shift + F2
-    pactl set-sink-volume @DEFAULT_SINK@ -5%
-shift + F4
-    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+F3
+    pactl -- set-sink-volume 0 +10%
+F2
+    pactl -- set-sink-volume 0 -10%
+F1
+    pactl set-sink-mute 0 toggle
 
 #Spotify
 shift + {s}
 	LD_PRELOAD=/home/alexia/spotifywm/spotifywm.so /opt/spotify/spotify
 
-#Redshift
+#Brightness
 F11
-	redshift
+	brightnessctl set 30%-
+F12
+	brightnessctl set +30%
 
 # Screenshot Print
 Print
@@ -49,7 +52,7 @@ super + d
 	rofi -show drun run window ssh -show-icons
 
 # make sxhkd reload its configuration files:
-super + ctrl + r
+F5
 	pkill -USR1 -x sxhkd && $HOME/.config/polybar/launch.sh
 
 
@@ -90,7 +93,7 @@ super + {t,shift + t,s,f}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+	bspc node -g {marked,lcked,sticky,private}
 
 #
 # focus/swap

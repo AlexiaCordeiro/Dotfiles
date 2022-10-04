@@ -22,6 +22,7 @@ bspc rule -a Org.gnome.Nautilus desktop='^3'
 bspc rule -a Code desktop='^5'  
 bspc rule -a Eclipse desktop='^5'  
 bspc rule -a figma-linux desktop='^6'  
+bspc rule -a Mars desktop='^5'  
 
 # Border
 bspc config normal_border_color \#2E3436  # janela não ativa
