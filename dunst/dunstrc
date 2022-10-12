@@ -1,11 +1,11 @@
 [global]
-    ### Display ###
+
+
+### Display ###
 
     # Which monitor should the notifications be displayed on.
     monitor = 1
     follow = none
-
-    geometry = "597x50+100+50"
 
     indicate_hidden = yes
 
@@ -13,7 +13,6 @@
     # width is 0.
     shrink = no
     transparency = 0
-    notification_height = 0
 
     # Set to 0 to disable.
     separator_height = 1
@@ -22,13 +21,14 @@
     padding = 1
 
     # Horizontal padding.
-    horizontal_padding = 5
+    horizontal_padding = 3
 
     # Set to 0 to disable.
-    frame_width = 5
+    frame_width = 3
+
 
     # Defines color of the frame around the notification window.
-    frame_color = "#5775A6"
+    frame_color = "#5E7EB3"
     separator_color = frame
 
     # Sort messages by urgency.
@@ -82,7 +82,7 @@
     stack_duplicates = true
 
     # Hide the count of merged notifications with the same content
-    hide_duplicate_count = true'
+    hide_duplicate_count = false
 
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
@@ -90,13 +90,13 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = right
+    icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 150
+    max_icon_size = 80
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/ArchLabs-Light/16x16/status/:/usr/share/icons/ArchLabs-Dark/16x16/devices/
+    icon_path = /usr/share/icons/Qogir/16/status/:/usr/share/icons/Qogir-dark/16/devices/
 
     ### History ###
 
@@ -127,7 +127,6 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
 
     # Manage dunst's desire for talking
     # Can be one of the following values:
@@ -136,7 +135,6 @@
     #  mesg: Important Messages
     #  info: all unimportant stuff
     # debug: all less than unimportant stuff
-    verbosity = mesg
 
     # Define the corner radius of the notification window
     # in pixel size. If the radius is 0, you have no rounded
@@ -180,7 +178,7 @@
     # where there are multiple screens with very different dpi values.
     #per_monitor_dpi = 161
 
-[shortcuts]
+#[shortcuts]
 
     # Shortcuts are specified as [modifier+][modifier+]...key
     # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
@@ -188,19 +186,19 @@
     # Xev might be helpful to find names for keys.
 
     # Close notification.
-    close = ctrl+alt+space
+ #   close = ctrl+alt+space
 
     # Close all notifications.
-    close_all = ctrl+shift+space
+  #  close_all = ctrl+shift+space
 
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
+   # history = ctrl+grave
 
    # Context menu.
-    context = ctrl+shift+period
+    #context = ctrl+shift+period
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
@@ -213,9 +211,9 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#000000"
+    background = "#0A0E14"
     foreground = "#fff"
-    frame_color = "#000aff"
+    frame_color = "#5E7EB3"
     timeout = 4
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
