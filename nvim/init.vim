@@ -3,6 +3,8 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set cursorline
+hi CursorLine ctermbg=8 "8 = dark gray, 15 = white
 
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
