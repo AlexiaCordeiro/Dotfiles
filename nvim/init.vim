@@ -76,34 +76,9 @@ let g:ale_linters = {
     \ 'c': ['clang']
 \}
 
-"Autosave
-
-lua << EOF
-
-local autosave = require("autosave")
-
-autosave.setup(
-    {
-        enabled = true,
-        execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
-        events = {"InsertLeave", "TextChanged"},
-        conditions = {
-            exists = true,
-            filename_is_not = {},
-            filetype_is_not = {},
-            modifiable = true
-        },
-        write_all_buffers = false,
-        on_off_commands = true,
-        clean_command_line_interval = 0,
-        debounce_delay = 135,
-    }
-)
-EOF
 
 "Appearence
 
-"set termguicolors     " enable true colors support"
 let ayucolor="dark"   " for dark version of theme colorscheme ayu"
 
 
@@ -153,3 +128,4 @@ tnoremap <A-t> <C-\><C-n>:call TermToggle(12)<CR>
 
 tnoremap <Esc> <C-\><C-n>
 tnoremap :q! <C-\><C-n>:q!<CR>
+
