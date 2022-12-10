@@ -23,6 +23,8 @@ set number
 
 nnoremap <C-A> :tabprevious<CR>
 nnoremap <C-S> :tabnext<CR>
+nnoremap <C-N> :tabnew<CR>
+nnoremap <C-W> :tabclose<CR>
 
 "DIscord rich presence
 " General options
@@ -53,6 +55,9 @@ call neomake#configure#automake('nrwi', 500)
 "code highlight
 hi HighlightedyankRegion cterm=reverse gui=reverse
 
+"NERDthree
+let NERDTreeMapOpenInTab='<ENTER>'
+
 "Code formatting
 let g:neoformat_cpp_clangformat = {
     \ 'exe': 'clang-format',
@@ -74,6 +79,7 @@ let g:ale_linters = {
 "Autosave
 
 lua << EOF
+
 local autosave = require("autosave")
 
 autosave.setup(
