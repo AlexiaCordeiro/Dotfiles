@@ -8,6 +8,8 @@ endif
 
 
 call plug#begin('~/.config/nvim/autoload/plugged')
+"Discord rich presence 
+    Plug 'andweeb/presence.nvim'
 "Find sintax errors
     Plug 'maxmellon/vim-jsx-pretty'
 "COC 
@@ -23,9 +25,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 "Automaticly close bracket
     Plug 'jiangmiao/auto-pairs'
 "Autosave
-    Plug 'Pocco81/AutoSave.nvim'
-"Tabs
-    Plug 'pacha/vem-tabline'
+    Plug 'Pocco81/auto-save.nvim'
 " Switch to the begining and the end of a block by pressing %
     Plug 'tmhedberg/matchit'
 " Git integration
@@ -34,17 +34,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ayu-theme/ayu-vim' 
 "Terminal
     Plug 'kassio/neoterm'
-"Java
-    Plug 'mfussenegger/nvim-jdtls'
 "Clang
     Plug 'deoplete-plugins/deoplete-clang'
 "Linting
     Plug 'dense-analysis/ale'
-"Java Debugger
-    Plug 'puremourning/vimspector'
 "Autocomplete
     Plug 'zchee/deoplete-jedi'
-"Code suntax
+"Code sintax
     Plug 'neomake/neomake'
 "Highligting
     Plug 'machakann/vim-highlightedyank'
@@ -52,6 +48,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tmhedberg/SimpylFold'
 "Python linting
     Plug 'vim-scripts/pylint.vim'
-call plug#end()
+"for c#
 
+Plug 'neovim/nvim-lspconfig'
+
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" For vsnip users.
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
+call plug#end()
 

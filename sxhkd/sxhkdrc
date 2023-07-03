@@ -23,10 +23,10 @@ shift + {s}
 
 #Brightness
 #XF86MonBrightnessDown
-F11
+ctrl + F11
 	brightnessctl set 30%-
 #XF86MonBrightnessUp
-F12
+ctrl + F12
 	brightnessctl set +30%
 
 # Screenshot Print
@@ -43,7 +43,7 @@ F9
 
 #Arquivos
 F10
-	nautilus
+	Thunar
 
 #Power
 super + End
@@ -65,7 +65,7 @@ F5
 
 # quit/restart bspwm
 super + shift + r
-	bspc {quit,wm -r}
+	bspc {wm -r}
 
 # close and kill
 super + shift + q

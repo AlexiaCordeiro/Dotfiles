@@ -2,8 +2,9 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor eDP1 -d I II III IV V 
-bspc monitor HDMI1 -d VI VII VIII IX X 
+bspc monitor eDP1 -d II III IV VIII IX
+#bspc monitor eDP1 -d II III IV VIII IX I V VI VII X 
+bspc monitor HDMI1 -d I V VI VII X 
 
 bspc config border_width         2
 bspc config window_gap          0
@@ -14,20 +15,21 @@ bspc config gapless_monocle      true
 bspc config pointer_follows_focus false
 bspc config focus_follows_pointer true
 
-bspc rule -a Chromium desktop='^1'
-bspc rule -a firefox desktop='^1'
-bspc rule -a Steam state=floating desktop='^7' 
-bspc rule -a Spotify desktop='^8' 
-bspc rule -a discord desktop='^9' 
-bspc rule -a Alacritty desktop='^2' 
-bspc rule -a okular desktop='^4'  
-bspc rule -a org.gnome.Nautilus desktop='^3'  
-bspc rule -a Code desktop='^5'  
-bspc rule -a Eclipse desktop='^5'  
-bspc rule -a figma-linux desktop='^6'  
-bspc rule -a Mars desktop='^5'  
-bspc rule -a Element desktop='^9'  
-
+bspc rule -a Chromium desktop='^6'
+bspc rule -a firefox desktop='^6'
+bspc rule -a Steam state=floating desktop='^9' 
+bspc rule -a Spotify desktop='^4' 
+bspc rule -a discord desktop='^5' 
+bspc rule -a Alacritty desktop='^1' 
+bspc rule -a okular desktop='^3'  
+bspc rule -a Thunar desktop='^2'  
+bspc rule -a Code desktop='^7'  
+bspc rule -a Eclipse desktop='^7'  
+bspc rule -a figma-linux desktop='^8'  
+bspc rule -a Mars desktop='^7'  
+bspc rule -a Element desktop='^4'  
+bspc rule -a qpdfview desktop='^3'
+bspc rule -a deezer-enhanced desktop='4'
 # Border
 bspc config normal_border_color \#2E3436  # janela não ativa
 bspc config active_border_color \#CCCCCC # ?
@@ -71,9 +73,6 @@ xsetroot -cursor_name left_ptr &
 #activate keyboard
 xset led 3 &
 
-#Redshift
-redshift-gtk &
-
 #Nextcloud
-com.nextcloud.desktopclient.nextcloud
+com.nextcloud.desktopclient.nextcloud &
 
